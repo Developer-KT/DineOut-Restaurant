@@ -1,0 +1,22 @@
+[{
+    "name": "Tyler",
+    "lastName": "Jones",
+    "age": 21,
+    "cars": ["Audi A4", "Ford Mustang"],
+    "child": {
+        "name": "Minnie",
+        "gender": "female",
+        "age": 1
+    }
+},
+{
+    "name": "Tyler",
+    "lastName": "Jones",
+    "age": 21,
+    "cars": ["Audi A4", "Ford Mustang"],
+    "child": {
+        "name": "Minnie",
+        "gender": "female",
+        "age": 1
+    }
+}]

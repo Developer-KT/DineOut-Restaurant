@@ -1,0 +1,531 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Kumbh Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+                                                                        /* Header */
+
+.container {
+    width: 100%;
+    height: 50px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+}
+
+.left-corner {
+    display: block;
+    float: left;
+}
+
+.logo {
+    display: flex;
+    float: left;
+}
+
+.logo img {
+    margin-top: 4px;
+    margin-left: 15px;
+    height: 40px;
+    width: 40px;
+}
+
+.brand-name {
+    display: flex;
+    float: right;
+    margin: 3px auto;
+    padding: 6px;
+    color: orange;
+}
+
+.right-corner {
+    display: grid;
+    float: right;
+    margin: 5px;
+    grid-template-columns: 1fr;
+}
+
+.navbar-toggle {
+    position: fixed;
+    left: 93%;
+    cursor: pointer;
+    width: 25px;
+    margin-top: 5px;
+    transition: all 0.3s ease-in-out;                                                       /* When the button moves */
+}
+
+.in-active {
+    position: fixed;
+    left: 93%;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    display: block;
+    cursor: pointer;
+}
+
+
+.bars-items {
+    display: none                                                                       /* Initially */
+}
+
+.is-active .bar:nth-child(2) {                                                              /* Huh? (Revisit) */
+    opacity: 0;
+}
+
+.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+                                                            /* JS Addition */
+
+.menu-items {
+    display: grid;
+    background-color: orange;
+    height: 625px;
+    width: 200px;
+    right: 0%;
+    top: 0%;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menu-items ul {
+    list-style: none;
+    margin: 10px auto;
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.menu-items ul li {
+    margin-top: 13px;
+}
+
+.menu-items ul li:hover {
+    transform: scale(1.122);
+    cursor: pointer;
+    font-weight: bold;
+}
+                                                            
+.nav-toggle .bar-add {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background: black;
+    display: block;
+    cursor: pointer;
+}
+
+                                                        /* Home Section */
+
+.home {
+    background-image: url(Images/juschek.jpg);
+    height: 625px;
+    text-align: center;
+    width: auto;
+}
+
+.brand {
+    text-align: center;
+    padding: 200px 0;
+    padding-bottom: 25px;
+}
+
+.brand h1 {
+    font-size: 50px;
+    font-family: cursive;
+    animation: slideup 2s forwards;
+}
+
+@keyframes slideup {
+    0% {
+        margin-top: 500px;
+    }
+    100% {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1111px) {
+    .brand h2 {
+        font-size: 20px;
+        margin: auto 7px;
+    }
+}
+@media screen and (max-width: 835px) {
+    .brand h2 {
+        font-size: 18px;
+    }
+    .brand h1 {
+        font-size: 35px;
+    }
+}
+@media screen and (max-width: 795px) {
+    .brand h2 {
+        font-size: 17px;
+    }
+    .brand h1 {
+        font-size: 35px;
+    }
+}
+
+.button {
+    display: grid;
+    margin: 5px auto;
+    align-items: center;
+    width: 130px;
+    height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    color: orange;
+    border: orange solid;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.button a {
+    color: orange;
+}
+
+.button:hover {
+    background-color: orange;
+}
+
+                                                        /* About Section */
+
+.about {
+    height: 650px;
+    background-color: rgb(68, 68, 73);
+    color: white;
+    padding: 0 15px;
+}
+
+.heading {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.main-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+}
+
+.description h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.description p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+}
+
+@media screen and (max-width: 1166px) {                                 /* Media screen 1166px */
+    .description p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 690px) {                                  /* Media screen 690px */
+    .description p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 578px) {                                  /* Media screen 578px */
+    .description p {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 522px) {                                  /* Media screen 522px */
+    .description p {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 444px) {                                  /* Media screen 522px */
+    .description p {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 385px) {                                  /* Media screen 522px */
+    .description p {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 355px) {                                  /* Media screen 522px */
+    .description p {
+        font-size: 9.5px;
+    }
+}
+@media screen and (max-width: 324px) {                                  /* Media screen 522px */
+    .description p {
+        font-size: 9px;
+    }
+}
+
+.picture {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin: 30px;
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+}
+
+                                                        /* Our Menu Section */
+
+.menu {
+    background-color: rgb(109, 109, 109);
+    color: white;
+    padding: 0 15px;
+}
+
+.main-menu {
+    display: grid;
+    justify-content: center space-around;
+}
+
+.lists-container {
+    margin: 40px auto;
+    color: white;
+}
+
+.menu-list {
+    float: left;
+    padding: 15px;
+    list-style: none;
+    color: white;
+    font-size: large;
+}
+
+.menu-list {
+    background-color: transparent;
+    border: none;
+}
+
+.menu-list:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(2, 1, 0);
+    border: transparent;
+}
+
+.food-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.food-container {
+    display: none;
+}
+
+.food-container.is-active {
+    display: grid;
+}
+
+.menu-item {
+    padding: 75px 15px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+
+.menu-title {
+    display: flex;
+    align-items: center;
+}
+
+.menu-title img {
+    height: 75px;
+    width: 115px;
+    margin-right: 15px;
+}
+
+.menu-title h3 {
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 700px) {                              /* Media screen 700px */
+    .menu-title {
+        width: 115px;
+    }
+
+}
+@media screen and (max-width: 645px) {                              /* Media screen 645px */
+    .menu-title {
+        display: block;
+        text-align-last: center;
+    }
+
+}
+
+.menu-item:hover h3 {
+    color: orange;
+}
+
+.menu-item-price {
+    color: orange;
+}
+
+.menu-item:hover .menu-item-price {
+    color: white;
+}
+
+                /* --------------------------------------------------- JS Add ------------------------------------------------ */
+
+.active {
+    color: orange;
+}
+.active:hover {
+    color: orange;
+    font-weight: 100;
+}
+        /* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+                                                        /* Reviews Section */
+
+.testimonials-section {
+    padding: 50px;
+    color: white;
+    background-color: rgb(75, 75, 75);
+}
+
+.testimonials-section h1 {
+    text-align: center;
+}
+
+.reviews-container {
+    margin: 65px auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 25px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1166px) {                             /* Media screen: 1166px */
+    .reviews-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+.review {
+    width: 250px;
+    height: 300px;
+    color: white;
+    border: rgb(189, 189, 189) solid;
+    border-width: thin;
+    padding: 10px;
+}
+
+@media screen and (max-width: 900px) {                              /* Media screen: 900px */
+    .review {
+        width: 200px;
+        height: 300px;
+    }
+    .top span {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 750px) {                              /* Media screen: 750px */
+    .reviews-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .review {
+        width: 250px;
+        height: 300px;
+    }
+}
+@media screen and (max-width: 650px) {                              /* Media screen: 650px */
+    .review {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+.review img {
+    height: 65px;
+    width: 75px;
+    border-radius: 100%;
+    margin-left: 35px;
+}
+
+@media screen and (max-width: 550px) {                              /* Media screen: 550px */
+    .review {
+        width: 190px;
+        height: 300px;
+        margin: 0 auto;
+    }
+    .review img {
+        width: 70px;
+        height: 60px;
+        border-radius: 75%;
+    }
+    .review {
+        margin: 10px;
+    }
+    .review p {
+        font-size: 15px;
+    }
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.top span {
+    font-size: medium;
+    font-weight: lighter;
+    color: orange;
+}
+
+.checked {
+    color: orange;
+}
